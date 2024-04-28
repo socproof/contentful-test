@@ -1,0 +1,13 @@
+fragment CommerceProductFields on CommerceProduct {
+    __typename
+    sys {
+        id
+    }
+    commercetoolLink
+}
+
+query CtfCommerceProduct($id: String!, $locale: String, $preview: Boolean) {
+    commerceProduct(id: $id, preview: $preview, locale: $locale) {
+        ...CommerceProductFields
+    }
+}

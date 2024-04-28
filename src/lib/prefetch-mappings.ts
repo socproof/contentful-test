@@ -13,6 +13,7 @@ import {
   CtfPersonQuery,
   CtfProductQuery,
 } from '@src/lib/__generated/graphql.types';
+import { useCtfCommerceProductQuery } from '@src/components/features/ctf-components/ctf-commerce-product/__generated/ctf-commerce-product.generated';
 
 export type PrefetchMappingTypeFetcher = CtfBusinessInfoQuery | CtfPersonQuery | CtfProductQuery;
 
@@ -30,4 +31,5 @@ export const prefetchMap = {
   TopicBusinessInfo: useCtfBusinessInfoQuery,
   TopicProduct: useCtfProductQuery,
   TopicPerson: useCtfPersonQuery,
+  CommerceProduct: useCtfCommerceProductQuery,
 };
